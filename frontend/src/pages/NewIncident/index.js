@@ -31,7 +31,7 @@ export default function Register() {
           Authorization: ongId
         }
       });
-      alert(`Caso cadastrado com sucesso. ID: ${response.data.id}`);
+      alert("Caso cadastrado com sucesso.");
 
       history.push("/profile");
     } catch (error) {
