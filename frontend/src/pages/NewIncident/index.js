@@ -16,20 +16,25 @@ export default function Register() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [value, setValue] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
 
   async function handleNewIncident(event) {
     event.preventDefault();
+
     const data = {
       title,
       description,
-      value
+      value,
     };
-    console.log(data);
+
+    const id = localStorage.getItem("ongId");
+
     try {
-      const response = await api.post("incidents", data, {
+      await api.put(`ongs/${id}`, { whatsapp });
+      await api.post("incidents", data, {
         headers: {
-          Authorization: ongId
-        }
+          Authorization: ongId,
+        },
       });
       alert("Caso cadastrado com sucesso.");
 
@@ -59,17 +64,22 @@ export default function Register() {
           <input
             placeholder="Titulo do caso"
             value={title}
-            onChange={e => setTitle(e.target.value)}
+            onChange={(e) => setTitle(e.target.value)}
           />
           <textarea
             placeholder="Descrição"
             value={description}
-            onChange={e => setDescription(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <input
+            placeholder="Telefone para contato"
+            value={whatsapp}
+            onChange={(e) => setWhatsapp(e.target.value)}
           />
           <input
             placeholder="Valor em reais"
             value={value}
-            onChange={e => setValue(e.target.value)}
+            onChange={(e) => setValue(e.target.value)}
           />
 
           <button className="button" type="submit">

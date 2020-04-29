@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
-import { FiLogIn } from "react-icons/fi";
+import React from "react";
+import { useHistory } from "react-router-dom";
+
+import FacebookLogin from "react-facebook-login";
 
 import api from "../../services/api";
 
@@ -12,40 +13,40 @@ import "./styles.css";
 export default function Logon() {
   const history = useHistory();
 
-  const [id, setId] = useState("");
-  async function handleLogin(event) {
-    event.preventDefault();
+  const responseFacebook = async (response) => {
+    const { name, email, location, error } = response;
+
+    const data = {
+      name,
+      email,
+      city: location.name,
+    };
 
     try {
-      const response = await api.post("sessions", { id });
+      const apiResponse = await api.post("ongs", data);
 
-      localStorage.setItem("ongId", id);
-      localStorage.setItem("ongName", response.data.name);
+      localStorage.setItem("ongId", apiResponse.data.id);
+      localStorage.setItem("ongName", apiResponse.data.name);
 
-      history.push("/profile");
+      if (!error) history.push("/profile");
     } catch (err) {
       alert("Erro ao fazer login, tente novamente.");
     }
-  }
+  };
+
   return (
     <div className="logon-container">
       <section className="form">
         <img src={logo} alt="Logo" />
 
-        <form onSubmit={handleLogin}>
+        <form>
           <h1>Faça seu logon</h1>
-          <input
-            placeholder="Sua ID"
-            value={id}
-            onChange={e => setId(e.target.value)}
+          <FacebookLogin
+            appId="190575558582526" //APP ID NOT CREATED YET
+            fields="name,email,location"
+            scope="public_profile,email,user_location"
+            callback={responseFacebook}
           />
-          <button className="button" type="submit">
-            Entrar
-          </button>
-          <Link className="back-link" to="/register">
-            <FiLogIn size={16} color="#E02041" />
-            Não tenho cadastro
-          </Link>
         </form>
       </section>
 
