@@ -1,52 +1,55 @@
-// Update with your config settings.
+require("dotenv").config();
+
+const {
+  DB_NAME,
+  DB_HOST,
+  DB_PORT,
+  DB_USER,
+  DB_PASSWORD,
+  DATABASE_URL,
+} = process.env;
 
 module.exports = {
   development: {
-    client: "sqlite3",
+    client: "postgresql",
     connection: {
-      filename: "./src/database/db.sqlite"
+      host: DB_HOST,
+      user: DB_USER,
+      password: DB_PASSWORD,
+      database: DB_NAME,
+      port: DB_PORT,
+    },
+    pool: {
+      min: 2,
+      max: 10,
     },
     migrations: {
-      directory: "./src/database/migrations"
+      directory: "./src/database/migrations",
     },
-    useNullAsDefault: true
+    useNullAsDefault: true,
   },
 
   test: {
     client: "sqlite3",
     connection: {
-      filename: "./src/database/dbtest.sqlite"
+      filename: "./src/database/dbtest.sqlite",
     },
     migrations: {
-      directory: "./src/database/migrations"
+      directory: "./src/database/migrations",
     },
-    useNullAsDefault: true
-  },
-
-  staging: {
-    client: "postgresql",
-    connection: {
-      database: "my_db",
-      user: "username",
-      password: "password"
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: "knex_migrations"
-    }
+    useNullAsDefault: true,
   },
 
   production: {
-    client: "sqlite3",
-    connection: {
-      filename: "./src/database/dbproduction.sqlite"
+    client: "postgresql",
+    connection: DATABASE_URL,
+    pool: {
+      min: 2,
+      max: 10,
     },
     migrations: {
-      directory: "./src/database/migrations"
+      directory: "./src/database/migrations",
     },
-    useNullAsDefault: true
-  }
+    useNullAsDefault: true,
+  },
 };
