@@ -4,11 +4,7 @@
     "slug": "bethehero",
     "privacy": "public",
     "sdkVersion": "36.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,9 +16,12 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-8494738329887200~6306770042"
+      }
+    },
     "ios": {
       "supportsTablet": true
     },

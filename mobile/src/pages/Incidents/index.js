@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, FlatList, Image, Text, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons";
+import { AdMobBanner } from "expo-ads-admob";
 
 import api from "../../services/api";
 
@@ -88,6 +89,11 @@ export default function Incidents() {
             </TouchableOpacity>
           </View>
         )}
+      />
+      <AdMobBanner
+        style={{ position: "absolute", bottom: 0 }}
+        adUnitID="ca-app-pub-8494738329887200/9096584913" // "ca-app-pub-8494738329887200/9096584913"
+        testDeviceID="EMULATOR"
       />
     </View>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { View, Image, Text, TouchableOpacity, Linking } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons";
+import { AdMobBanner } from "expo-ads-admob";
 import * as MailComposer from "expo-mail-composer";
 
 import logo from "../../assets/logo.png";
@@ -81,6 +82,11 @@ export default function Detail() {
           </TouchableOpacity>
         </View>
       </View>
+      <AdMobBanner
+        style={{ position: "absolute", bottom: 0 }}
+        adUnitID="ca-app-pub-8494738329887200/9096584913" // "ca-app-pub-8494738329887200/9096584913"
+        testDeviceID="EMULATOR"
+      />
     </View>
   );
 }
