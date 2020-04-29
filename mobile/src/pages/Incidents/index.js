@@ -31,7 +31,7 @@ export default function Incidents() {
     setLoading(true);
 
     const response = await api.get("incidents", {
-      params: { page }
+      params: { page },
     });
     setIncients([...incidents, ...response.data]);
     setTotal(response.headers["x-total-count"]);
@@ -62,10 +62,10 @@ export default function Incidents() {
         onEndReached={loadIncidents}
         onEndReachedThreshold={0.2}
         data={incidents}
-        keyExtractor={incident => String(incident.id)}
+        keyExtractor={(incident) => String(incident.id)}
         renderItem={({ item: incident }) => (
           <View style={styles.incident}>
-            <Text style={styles.incidentProperty}>ONG:</Text>
+            <Text style={styles.incidentProperty}>AJUDE:</Text>
             <Text style={styles.incidentValue}>{incident.name}</Text>
 
             <Text style={styles.incidentProperty}>CASO:</Text>
@@ -75,7 +75,7 @@ export default function Incidents() {
             <Text style={styles.incidentValue}>
               {Intl.NumberFormat("pt-BR", {
                 style: "currency",
-                currency: "BRL"
+                currency: "BRL",
               }).format(incident.value)}
             </Text>
 
