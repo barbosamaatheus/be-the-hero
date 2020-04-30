@@ -29,10 +29,9 @@ Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
 **No entando, essa adaptação é destinada a ajudar no combate a pandemia do COVID-19.**
 
 ### 🦸‍♂️ Como Funciona? <br>
-Segundo as recomendaões da [OMS](https://www.who.int/eportuguese/countries/bra/pt/) as pessoas devem se manter em isolamento social e evitar ao maximo sair de susas casas.
-As pessoas idosas principalmente pois estão no grupo considerado de maior risco, devem recorer a outras pessoas para por exemplo, ir ao supermercado. 
+Segundo as recomendações da [OMS](https://www.who.int/eportuguese/countries/bra/pt/) as pessoas devem se manter em isolamento social e evitar ao máximo sair de suas casas. As pessoas idosas principalmente, pois estão no grupo considerado de maior risco, devem recorrer a outras pessoas para, por exemplo, ir ao supermercado.
 
-Esse projeto disponibiliza uma versão web onde as pessoas podem cadastrar as suas necessidades e uma versão mobile onde outras pessoas podem ter acesso aos casos cadastrados e escolher um ou mais casos para ajudar.
+Esse projeto disponibiliza uma versão “web” onde as pessoas podem cadastrar as suas necessidades e uma versão mobile onde outras pessoas podem ter acesso aos casos cadastrados e escolher um ou mais casos para ajudar.
 
 ##### Versão WEB: https://sejaheroi.netlify.app/
 screenshots
