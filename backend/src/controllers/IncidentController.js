@@ -18,7 +18,7 @@ module.exports = {
         "ongs.city",
       ]);
 
-    res.header("X-Total-Count", count["count(*)"]);
+    res.header("X-Total-Count", count["count"]);
     return res.status(200).json(incidents);
   },
 
