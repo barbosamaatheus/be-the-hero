@@ -93,7 +93,8 @@ export default function Incidents() {
       <AdMobBanner
         style={{ position: "absolute", bottom: 0 }}
         adUnitID="ca-app-pub-8494738329887200/9096584913" // "ca-app-pub-8494738329887200/9096584913"
-        testDeviceID="EMULATOR"
+        bannerSize="fullBanner"
+        servePersonalizedAds
       />
     </View>
   );
