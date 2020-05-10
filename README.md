@@ -12,7 +12,9 @@
 <br>
 
 ### :rocket: Tecnologias usadas
+
 Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
+
 - [Node.js](https://nodejs.org/en/)
 - [Expo](https://expo.io/)
 - [Express](https://expressjs.com/pt-br/)
@@ -25,31 +27,34 @@ Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
 
 ### :muscle: Projeto
 
-<b>Be the Hero</b> originalmente é um projeto que visa ajudar, de maneira <b>financeira</b> uma instituição de caridade, ajudando a mesma se manter. 
+<b>Be the Hero</b> originalmente é um projeto que visa ajudar, de maneira <b>financeira</b> uma instituição de caridade, ajudando a mesma se manter.
 **No entando, essa adaptação é destinada a ajudar no combate a pandemia do COVID-19.**
 
 ### 🦸‍♂️ Como Funciona? <br>
+
 Segundo as recomendações da [OMS](https://www.who.int/eportuguese/countries/bra/pt/) as pessoas devem se manter em isolamento social e evitar ao máximo sair de suas casas. As pessoas idosas principalmente, pois estão no grupo considerado de maior risco, devem recorrer a outras pessoas para, por exemplo, ir ao supermercado.
 
 Esse projeto disponibiliza uma versão “web” onde as pessoas podem cadastrar as suas necessidades e uma versão mobile onde outras pessoas podem ter acesso aos casos cadastrados e escolher um ou mais casos para ajudar.
 
 ##### Versão WEB: https://sejaheroi.netlify.app/
+
 screenshots
+
 <p align="center">
     <img alt="login" src="./img/login.png" width="250px">
     <img alt="profile" src="./img/Profile.png" width="250px">
     <img alt="newIncident" src="./img/newIncident.png" width="250px">
 </p>
 
-
 ##### Versão MOBILE: https://exp.host/@barbosamaatheus/bethehero
+
 screenshots
+
 <p align="center">
     <img alt="splash" src="./img/splash.png" height="500px">
-    <img alt="incidents" src="./img/incidents.jpeg" height="500px">
-    <img alt="detail" src="./img/detail.jpeg" height="500px">
+    <img alt="incidents" src="./img/incidents.png" height="500px">
+    <img alt="detail" src="./img/detail.png" height="500px">
 </p>
-
 
 ### :recycle: Como contribuir
 
