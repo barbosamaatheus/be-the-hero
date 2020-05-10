@@ -18,8 +18,11 @@ export default function Register() {
   const [value, setValue] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
 
+  const [loading, setLoading] = useState(false);
+
   async function handleNewIncident(event) {
     event.preventDefault();
+    setLoading(true);
 
     const data = {
       title,
@@ -36,11 +39,12 @@ export default function Register() {
           Authorization: ongId,
         },
       });
-      alert("Caso cadastrado com sucesso.");
 
+      setLoading(false);
+      alert("Caso cadastrado com sucesso.");
       history.push("/profile");
     } catch (error) {
-      alert("Erro ao cadastrar caso, tente novamente");
+      history.push("/profile");
     }
   }
 
@@ -82,8 +86,8 @@ export default function Register() {
             onChange={(e) => setValue(e.target.value)}
           />
 
-          <button className="button" type="submit">
-            Cadastrar
+          <button className="button" type="submit" disabled={loading}>
+            {loading ? "Isso pode demorar um pouco..." : "Cadastrar"}
           </button>
         </form>
       </div>
