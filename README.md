@@ -38,7 +38,6 @@ Esse projeto disponibiliza uma versão “web” onde as pessoas podem cadastrar
 
 ##### Versão WEB: https://sejaheroi.netlify.app/
 
-screenshots
 
 <p align="center">
     <img alt="login" src="./img/login.png" width="250px">
@@ -46,9 +45,7 @@ screenshots
     <img alt="newIncident" src="./img/newIncident.png" width="250px">
 </p>
 
-##### Versão MOBILE: https://exp.host/@barbosamaatheus/bethehero
-
-screenshots
+##### Versão MOBILE: https://expo.io/@barbosamaatheus/seja-heroi
 
 <p align="center">
     <img alt="splash" src="./img/splash.png" height="500px">
