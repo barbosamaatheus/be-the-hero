@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "BeTheHero",
-    "slug": "BeTheHero",
+    "name": "Seja Heroi",
+    "slug": "seja-heroi",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": ["ios", "android"],
-    "version": "1.0.1",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -18,8 +18,8 @@
     },
     "assetBundlePatterns": ["**/*"],
     "android": {
-      "package": "com.barbosa.bethehero",
-      "versionCode": 2,
+      "package": "com.barbosa.sejaheroi",
+      "versionCode": 1,
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-8494738329887200~6306770042"
       }
@@ -27,7 +27,7 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": "",
+    "description": "Esse projeto disponibiliza uma versão “web” onde as pessoas podem cadastrar as suas necessidades e uma versão mobile onde outras pessoas podem ter acesso aos casos cadastrados e escolher um ou mais casos para ajudar.",
     "githubUrl": "https://github.com/barbosamaatheus/be-the-hero"
   }
 }
